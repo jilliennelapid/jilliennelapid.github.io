@@ -1,0 +1,126 @@
+body {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 4rem;
+}
+
+h2 {
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+p {
+    font-weight: 300;
+    font-size: 1.25rem;
+}
+
+
+.side-menu a {
+    font-weight: 300;
+}
+
+#layout {
+    display: flex;
+}
+
+.side-menu {
+    width: 250px;
+    height: 100vh;
+    background-color: #111;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Navigation links */
+.side-menu a {
+    padding: 15px 15px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    color: #f1f1f1;
+}
+
+/* Content area */
+.content {
+    margin-left: 250px;
+    padding: 40px;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+    padding: 40px;
+}
+
+@media screen and (max-height: 450px) {
+    .side-menu { padding-top: 15px; }
+    .side-menu a { font-size: 18px; }
+}
+
+.skills i {
+    font-size: 60px;
+    margin: 15px;
+}
+
+/*
+.project-card {
+    background: #f9f9f9;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+    width: 1180px;
+}
+*/
+.project-card {
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #fafafa;
+}
+
+.project-card summary {
+    cursor: pointer;
+    list-style: none;
+}
+
+.project-card summary::-webkit-details-marker {
+    display: none;
+}
+
+.project-card summary::after {
+    content: "▼";
+    float: right;
+    transition: transform 0.2s;
+}
+
+.project-card[open] summary::after {
+    transform: rotate(180deg);
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
